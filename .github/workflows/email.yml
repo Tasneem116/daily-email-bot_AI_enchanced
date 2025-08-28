@@ -2,8 +2,11 @@ name: Daily Email Automation
 
 on:
   schedule:
-    - cron: "0 9 * * *"   # runs every day at 9AM UTC
-  workflow_dispatch:       # manual trigger
+    - cron: "0 10 28 8 *"   # 3:30 PM IST (10:00 UTC)
+    - cron: "0 11 28 8 *"   # 4:30 PM IST (11:00 UTC)
+    - cron: "0 12 28 8 *"   # 5:30 PM IST (12:00 UTC)
+  workflow_dispatch:
+
 
 jobs:
   send_email:
