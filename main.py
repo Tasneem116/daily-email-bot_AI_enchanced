@@ -12,7 +12,6 @@ from email import encoders
 import pickle
 
 # Hugging Face Transformers
-!pip install transformers sentencepiece --quiet
 from transformers import pipeline
 
 # Gmail API scope
@@ -58,7 +57,7 @@ def send_email():
     csv_path = "quotes.csv"
     with open(csv_path, "w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
-        writer.writerow(["Quote", "Author", "Summary", "Translation (ES)", "Motivational"])
+        writer.writerow(["Quote", "Author", "Summary", "Translation (HI)", "Motivational"])
         for quote, author in zip(quotes, authors):
             q = quote.text
             s = summarize_quote(q)
