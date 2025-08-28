@@ -18,7 +18,8 @@ from transformers import pipeline
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
 
 # --- AI Helpers (Hugging Face) ---
-summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn", framework="pt")
+
 # Initialize the pipeline for English to Hindi translation
 translator = pipeline("translation_en_to_hi", model="Helsinki-NLP/opus-mt-en-hi")
 motivator = pipeline("text-generation", model="distilgpt2")
